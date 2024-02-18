@@ -1,0 +1,45 @@
+database name: bits_sewa
+
+create table patient(
+    p_name varchar(255),
+    p_phone varchar(255),
+    p_date varchar(255),
+    p_address varchar(255),
+    test_name varchar(255),
+    test_report varchar(255),
+    c_phone varchar(255),
+    FOREIGN key (c_phone) REFERENCES clinic(cphone)
+    );
+
+
+
+CREATE TABLE clinic(
+    oname varchar(255),
+    cname varchar(255),
+    cphone varchar(255),
+    cemail varchar(255),
+    caddress varchar(255),
+    cpin varchar(255),
+    cstate varchar(255),
+    cpan varchar(255),
+    ccreatepass varchar(255),
+    cconfpass varchar(255),
+    cfee varchar(255),
+    PRIMARY KEY(cphone)
+);
+
+v2 database:
+
+create table patient(
+    p_name varchar(255),
+    p_phone varchar(255),
+    p_date varchar(255),
+    p_address varchar(255),
+    test_name varchar(255),
+    test_report varchar(255),
+    c_phone varchar(255),
+    good VARCHAR(5),
+    average VARCHAR(5),
+    bad VARCHAR(5),
+    FOREIGN key (c_phone) REFERENCES clinic(cphone)
+    );
